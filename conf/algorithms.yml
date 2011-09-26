@@ -1,0 +1,91 @@
+algorithms:
+  executable_path: ruby
+  output_language: ruby
+  key_words:
+    algo:
+      matcher: ^algo\s+(.*)$
+      replacement: \1
+      method_to_call: beginning_of_algorithm
+
+    begin:
+      matcher: ^debut
+      replacement:
+      method_to_call:
+
+    display:
+      matcher: ^afficher\((.*)\)$
+      replacement: \1
+      method_to_call: display
+
+    variables_block:
+      matcher: ^var\s*$
+      replacement:
+      method_to_call: variables_declaration
+
+    variable_declaration:
+      matcher: (.*):\s*([a-z0-9_]+)$
+      replacement: \1|\2
+      method_to_call:
+
+    assignment:
+      matcher: ^([a-z0-9_]+)\s*(<-)\s*(.*)
+      replacement: \1 = \3
+      method_to_call: assignment
+
+    end:
+      matcher: ^fin\s*
+      replacement:
+      method_to_call:
+
+    if:
+      matcher: ^si(.*)alors\s*$
+      replacement: \1
+      method_to_call: if_condition
+
+    else:
+      matcher: ^sinon\s*$
+      replacement:
+      method_to_call:
+
+    else_if:
+      matcher: ^sinon(\s+.*|)$
+      replacement: \1
+      method_to_call:
+
+    end_if:
+      matcher: ^fsi\s*$
+      replacement:
+      method_to_call:
+
+    for:
+      matcher: ^pour\s+([a-z0-9_]+)\s*=\s*([0-9-]+)\s+a\s+([0-9-]+)(\s+par\s+pas\s+de\s+([0-9-]+)|)\s+faire$
+      replacement: \1 \2 \3 \5
+      method_to_call: for_loop
+
+    end_for:
+      matcher: ^fpour\s*$
+      replacement:
+      method_to_call:
+
+    while:
+      matcher: ^tq\s+(.*)\s+faire\s*$
+      replacement: \1
+      method_to_call: while_loop
+
+    end_while:
+      matcher: ^ftq\s*$
+      replacement:
+      method_to_call:
+
+    read:
+      matcher: ^saisir\s+([a-z0-9_]+)
+      replacement: \1
+      method_to_call: read
+
+  language:
+    ruby:
+      casts:
+        entier:   to_i
+        reel:       to_f
+        chaine:   to_s
+
