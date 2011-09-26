@@ -1,0 +1,49 @@
+= Algorithm
+
+Algorithm is a program written  in Ruby that help you to test and execute your algorithms
+
+Works with Ruby 1.9
+
+= How to use
+
+Just launch algorithm.rb with a file which contains your algorithm in parameter.
+
+Exemple of use:
+
+ruby algorithm.rb calculate_taxes.algo
+
+Script generates a file which can be executed to test your algorithm. By default the only generated language available is Ruby. You can add another language easily but it will be detailled to another section (the next one, in fact).
+
+= How to generate my algorithm in another language
+
+You must change the value in the yaml configuration file:
+
+algorithms:
+  output_language: ruby
+
+Thus, you must have a module and a class named with your language name specified in the configuration file. In this class you will have all methods that your algorithm can called. These methods are named "method_to_call" in the yaml configuration file:
+
+algorithms:
+  output_language: ruby
+  key_words:
+    algo:
+      matcher: ^algo\s+(.*)$
+      replacement: \1
+      method_to_call: beginning_of_algorithm
+
+    begin:
+      matcher: ^debut
+      replacement:
+      method_to_call:
+
+    display:
+      matcher: ^afficher\((.*)\)$
+      replacement: \1
+      method_to_call: display
+
+To explain more in details, you can specify an regex in the matcher that is tested for all lines. If the line matches we call the method define in "method_to_call" (if it's specified).
+
+= Contributors
+
+*Kevin Disneur
+
