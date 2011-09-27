@@ -6,7 +6,7 @@ class TestWriter < Test::Unit::TestCase
   def setup
     super
     @file_name = File.dirname(__FILE__) + "/../../../files/algorithm/extended_file/writer.txt"
-    @output = ExtendedFile::Writer.new @file_name
+    @output = Algorithm::ExtendedFile::Writer.new @file_name
   end
 
   def test_should_have_an_instance_of_file_behind_testwriter

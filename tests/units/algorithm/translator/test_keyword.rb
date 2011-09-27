@@ -5,7 +5,7 @@ class TestKeyword < Test::Unit::TestCase
 
   def setup
     super
-    @keyword = Translator::Keyword.new "my_keyword", "^my_keyword (.*)$", "\\1", "my_keyword_function"
+    @keyword = Algorithm::Translator::Keyword.new "my_keyword", "^my_keyword (.*)$", "\\1", "my_keyword_function"
   end
 
   def test_should_respond_to

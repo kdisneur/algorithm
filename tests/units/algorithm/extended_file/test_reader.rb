@@ -6,7 +6,7 @@ class TestReader < Test::Unit::TestCase
   def setup
     super
     file_to_load = File.dirname(__FILE__) + "/../../../files/algorithm/extended_file/reader.txt"
-    @input = ExtendedFile::Reader.new file_to_load
+    @input = Algorithm::ExtendedFile::Reader.new file_to_load
   end
 
   def test_should_be_able_to_get_a_file

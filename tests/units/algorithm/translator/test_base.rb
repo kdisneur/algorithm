@@ -5,12 +5,12 @@ class TestBase < Test::Unit::TestCase
 
   def setup
     super
-    @base = Translator::Base.new
+    @base = Algorithm::Translator::Base.new
   end
 
   def test_should_be_able_to_get_key_words
     assert @base.key_words.length == 16
-    @base.key_words.each {|keyword| assert keyword.instance_of? Translator::Keyword}
+    @base.key_words.each {|keyword| assert keyword.instance_of? Algorithm::Translator::Keyword}
   end
 
   def test_should_be_able_to_find_key_word_in_line
