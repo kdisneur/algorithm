@@ -5,7 +5,7 @@ module Algorithm
   class Configuration
     include Singleton
 
-    Default_configuration_file = "conf/algorithms.yml"
+    Default_configuration_file = "#{File.dirname(__FILE__)}/../../conf/algorithms.yml"
 
     def initialize
       file = Configuration::Default_configuration_file

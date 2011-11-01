@@ -86,6 +86,6 @@ algorithms:
     ruby:
       casts:
         entier:   to_i
-        reel:       to_f
+        reel:     to_f
         chaine:   to_s
 
