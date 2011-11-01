@@ -1,5 +1,5 @@
-require './lib/algorithm/configuration'
-require './lib/algorithm/translator/keyword'
+require_relative '../configuration'
+require_relative './keyword'
 
 module Algorithm
   module Translator

@@ -1,7 +1,7 @@
-require './lib/algorithm/extended_file/reader'
-require './lib/algorithm/extended_file/writer'
-require './lib/algorithm/configuration'
-require './lib/algorithm/translator/factory'
+require_relative './extended_file/reader'
+require_relative './extended_file/writer'
+require_relative './configuration'
+require_relative './translator/factory'
 
 module Algorithm
   class Algorithm

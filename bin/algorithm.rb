@@ -1,8 +1,6 @@
 #! /usr/bin/env ruby
 
-ENV['PATH'] = "#{ENV['PATH']}:#{File.join(File.dirname(__FILE__), '..')}"
-
-require './lib/algorithm/algorithm'
+require_relative '../lib/algorithm/algorithm'
 
 if __FILE__ == $0
   file = ARGV.first

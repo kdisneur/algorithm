@@ -1,5 +1,5 @@
-require './lib/algorithm/configuration'
-require './lib/algorithm/translator/base'
+require '../../configuration'
+require '../base'
 Dir[File.dirname(__FILE__) + '/actions/*.rb'].each {|file| require file }
 
 module Algorithm
