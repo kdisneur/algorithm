@@ -10,7 +10,7 @@ Just launch algorithm.rb with a file which contains your algorithm in parameter.
 
 Exemple of use:
 
-ruby algorithm.rb calculate_taxes.algo
+  ruby algorithm.rb calculate_taxes.algo
 
 Script generates a file which can be executed to test your algorithm. By default the only generated language available is Ruby. You can add another language easily but it will be detailled to another section (the next one, in fact).
 
